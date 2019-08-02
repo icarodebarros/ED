@@ -1,3 +1,6 @@
+#ifndef listasequencial_h_
+#define listasequencial_h_
+
 struct aluno {
     int matricula;
     char nome[30];
@@ -5,8 +8,8 @@ struct aluno {
 };
 typedef struct lista Lista;
 
-Lista* cria_lista();
-void libera_lista(Lista* li);
+extern Lista* cria_lista();
+extern void libera_lista(Lista* li);
 int tamanho_lista(Lista* li);
 int lista_cheia(Lista* li);
 int lista_vazia(Lista* li);
@@ -21,3 +24,5 @@ int remove_lista(Lista* li, int mat);
 
 int consulta_lista_posicao(Lista* li, int pos, struct aluno *al);
 int consulta_lista_matricula(Lista* li, int mat, struct aluno *al);
+
+#endif

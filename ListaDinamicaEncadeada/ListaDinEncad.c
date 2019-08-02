@@ -1,4 +1,5 @@
-#include <ListaDinEncad.h>
+#include <stdlib.h>
+#include "ListaDinEncad.h"
 
 struct elemento {
     struct aluno dados;
@@ -7,7 +8,7 @@ struct elemento {
 typedef struct elemento Elem;
 
 Lista* cria_lista() {
-    Lista* li = (Lista8) malloc(sizeof(Lista));
+    Lista* li = (Lista*) malloc(sizeof(Lista));
     if (li != NULL) *li = NULL;
     return li;
 }
@@ -16,7 +17,7 @@ void libera_lista(Lista* li) {
     if (li != NULL) {
         Elem* no;
         while((*li) != NULL) {
-            no = li*;
+            no = *li;
             *li = (*li)->prox;
             free(no);
         }
@@ -77,7 +78,7 @@ int insere_lista_ordenada(Lista* li, struct aluno al) {
         return 1;
     } else {
         Elem *ant, *atual = *li;
-        while(atual != NULL $$ atual->dados.matricula < al.matricula) {
+        while(atual != NULL && atual->dados.matricula < al.matricula) {
             ant = atual;
             atual = atual->prox;
         }
@@ -116,7 +117,7 @@ int remove_lista_final(Lista* li) {
 int remove_lista(Lista* li, int mat) {
     if (li == NULL) return 0;
     Elem *ant, *no = *li;
-    while(no != NULL && no->dados.matricula = mat) {
+    while(no != NULL && no->dados.matricula != mat) {
         ant = no;
         no = no->prox;
     }
@@ -131,7 +132,7 @@ int consulta_lista_posicao(Lista* li, int pos, struct aluno *al) {
     if (li ==NULL || pos <= 0) return 0;
     Elem *no = *li;
     int i = 1;
-    whiel (no != NULL && i < pos) {
+    while (no != NULL && i < pos) {
         no = no->prox;
         i++;
     }
@@ -145,7 +146,7 @@ int consulta_lista_posicao(Lista* li, int pos, struct aluno *al) {
 int consulta_lista_matricula(Lista* li, int mat, struct aluno *al) {
     if (li == NULL) return 0;
     Elem *no = *li;
-    whiel (no != NULL && no->dados.matricula != mat) no = no->prox;
+    while (no != NULL && no->dados.matricula != mat) no = no->prox;
     if (no == NULL) return 0;
     else {
         *al = no->dados;

@@ -1,5 +1,6 @@
-#include "ListaSequencial.h"
 #include <stdlib.h>
+#include "listasequencial.h"
+
 #define MAX 100
 struct lista {
     int qtd;
@@ -41,7 +42,8 @@ int insere_lista_final(Lista* li, struct aluno al) {
 int insere_lista_inicio(Lista* li, struct aluno al) {
     if (li == NULL) return 0;
     if (lista_cheia(li)) return 0;
-    for (int i = li->qtd-1; i >= 0; i--) 
+    int i;
+    for (i = li->qtd-1; i >= 0; i--) 
         li->dados[i+1] = li->dados[i];
     li->dados[0] = al;
     li->qtd++;
@@ -68,7 +70,8 @@ int remove_lista_final(Lista* li) {
 
 int remove_lista_inicio(Lista* li) {
     if (li == NULL || li->qtd == 0) return 0;
-    for (int k = 0; k < li->qtd-1; k++)
+    int k;
+    for (k = 0; k < li->qtd-1; k++)
         li->dados[k] = li->dados[k+1];
     li->qtd--;
     return 1;
@@ -76,10 +79,10 @@ int remove_lista_inicio(Lista* li) {
 
 int remove_lista(Lista* li, int mat) {
     if (li == NULL || li->qtd == 0) return 0;
-    int i = 0;
+    int k, i = 0;
     while(i < li->qtd && li->dados[i].matricula != mat) i++;
     if (i == li->qtd) return 0;
-    for (int k = i; k < li->qtd-1; k++)
+    for (k = i; k < li->qtd-1; k++)
         li->dados[k] = li->dados[k+1];
     li->qtd--;
     return 1;
