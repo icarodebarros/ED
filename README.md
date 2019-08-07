@@ -1,3 +1,3 @@
 # Estrutura de Dados
 
-Projetos execuatados pelo DevC++
+Projetos executados pelo DevC++
