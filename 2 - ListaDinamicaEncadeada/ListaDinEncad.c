@@ -93,6 +93,27 @@ int insere_lista_ordenada(Lista* li, struct aluno al) {
     }
 }
 
+int insere_lista_ordenada2(Lista* li, struct aluno al) {
+	if (li == NULL) return 0;
+	Elem* no = (Elem*) malloc(sizeof(Elem));
+	if (no == NULL) return 0;
+	no->dados = al;
+	
+	Elem *ant = NULL, *atual = (*li);
+	while(atual != NULL && atual->dados.matricula < al.matricula) {
+		ant = atual;
+		atual = atual->prox;
+	}
+	if (ant == NULL) {
+		no->prox = atual;
+		*li = no;
+	} else {
+		ant->prox = no;
+		no->prox = atual;
+	}
+	return 1;
+}
+
 int remove_lista_inicio(Lista* li) {
     if (li == NULL || (*li) == NULL) return 0;
     Elem* no = *li;
