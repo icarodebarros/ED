@@ -1,6 +1,6 @@
 [Project]
-FileName=PilhaEstatica.dev
-Name=PilhaEstatica
+FileName=PilhaDinamica.dev
+Name=PilhaDinamica
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit2]
-FileName=PilhaEstatica.c
+FileName=PilhaDinamica.h
 CompileCpp=0
 Folder=
 Compile=1
@@ -61,7 +61,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=PilhaEstatica.h
+FileName=PilhaDinamica.c
 CompileCpp=0
 Folder=
 Compile=1
