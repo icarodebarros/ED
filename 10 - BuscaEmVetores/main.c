@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
 	
 	printf((x != -1) ? "OK\n" : "ERRO\n");
 	printf("%d\n", x);
-	
+		
 	system("pause");
 	return 0;
 }
