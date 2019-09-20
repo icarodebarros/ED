@@ -2,15 +2,6 @@
 #include <stdlib.h>
 #include "Grafo.h"
 
-//struct grafo {
-//	int eh_ponderado; // é grafo ponderado? (Se arestas contém pesos)
-//	int nro_vertices; // guarda o número de vértices
-//	int grau_max; // número máximo de conexões de uma vértice (limitador do tamanho da lista estática)
-//	int** arestas; // matriz que guarda as conexões
-//	float** pesos; // matriz que guarda o peso de cada aresta
-//	int* grau; // lista que guarda o grau atual de cada vértice
-//};
-
 Grafo* cria_Grafo(int nro_vertices, int grau_max, int eh_ponderado) { // gera grafo de Lista de Adjacência 
 	Grafo *gr = (Grafo*) malloc(sizeof(struct grafo));
 	if (gr != NULL) {
