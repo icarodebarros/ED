@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
 	
 	/*
 	Contando instruções de um algoritmo:
-		- vamos contar quantas instruções siples ele executa;
+		- vamos contar quantas instruções simples ele executa;
 		- uma instrução simples é uma instrução que pode ser executada diretamente pelo CPU, ou algo muito perto disso;
 		- Tipos de instruções:
 			* atribuição de um valor à uma variável;
@@ -105,7 +105,7 @@ int main(int argc, char *argv[]) {
 		
 		- Exemplo: ordenação usando o selection sort
 			* Dado um array "V" de tamanho "n", procurar o menor valor (posição "me") e colocar na primeira posição;
-			* Repetir processo para a segunda posição, depois terceira e tec;
+			* Repetir processo para a segunda posição, depois terceira e etc;
 			* Parar quando o array estiver ordenado;			
 	*/
 		void selecionSort(int *V, int n) {
@@ -129,7 +129,7 @@ int main(int argc, char *argv[]) {
 			* Laço interno: número de execuções depende do valor do índice do laço externo (n-1, n-2, n-3, ..., 2, 1)
 		
 		- Para calcularmos o custo do selection sort temos que calcular o resultado da soma "1 + 2 + ... + (n-1) + n";
-		- Essa sina reoresenta o n úmero de execuções do laço interno, algo que não é tão simples de se calcular;
+		- Essa soma representa o número de execuções do laço interno, algo que não é tão simples de se calcular;
 		- Dependendo do algoritmo, calcular o seu custo exato pode ser uma tarefa muito complicada;
 		- No nosso caso, a soma "1 + 2 + ... + (n-1) + n" equivale a soma dos "n" termos de uma prograssão aritmética de razão 1:
 			* "1 + 2 + ... + (n-1) + n" => n(1+n)/2;
