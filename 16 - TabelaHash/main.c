@@ -30,9 +30,9 @@
 int main(int argc, char *argv[]) {
 	
 	/*
-		IMOPRTANTE: o tamanho da tabela hash é importante que seja número primo e evitar potencia de 2;
+		IMPORTANTE: o tamanho da tabela hash é importante que seja número primo e evitar potencia de 2;
 			- Um número primo resuz a probabilidade de colisões mesmo com função hashsing não eficaz;
-			- Uma potência de dois melhora a velocidade mas caussa colisões caso a função hashing seja simples;
+			- Uma potência de dois melhora a velocidade mas causa colisões caso a função hashing seja simples;
 	*/
 	Hash *ha = criaHash(47);
 	int x;
