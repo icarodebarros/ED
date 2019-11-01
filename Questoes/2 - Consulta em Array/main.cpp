@@ -25,6 +25,7 @@ int main(int argc, char** argv) {
 	return 0;
 }
 
+// Complexidade: O(n) -> Esse é o custo da criação do Mapa. Porém só se cria uma única vez! Todas as consultas são O(1)!
 mapa criarMapa(int* lst, int tam) {
 	mapa mp;
 	printf("Tamanho lista: %d\n", tam);

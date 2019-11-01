@@ -1,6 +1,5 @@
 #1 Algoritmo de inversão de vogais numa frase;
 
-#2 Dado um array de inteiro, o programa deve receber um int e retornar quantas vezes ele existe no array
-Dica: std::map<Key, T>;
+#2 Dado um array de inteiro, o programa deve receber um int e retornar quantas vezes ele existe no array;
 
-#3 Método que retorna booleano se árvore dada é ou não binária;
+#3 Método que verifica se árvore binária informada é ou não 'simétrica espelhada';
